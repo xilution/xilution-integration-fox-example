@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "verify": {
+    "commands": [
+      "make verify"
+    ]
+  },
+  "builds": {
+    "Test": {
+      "commands": [
+        "make build-test"
+      ]
+    },
+    "Prod": {
+      "commands": [
+        "make build-prod"
+      ]
+    },
+    "distDir": "./dist"
+  },
+  "tests": {
+    "Test": [
+      {
+        "name": "End to End Tests",
+        "commands": [
+          "make test-e2e"
+        ]
+      }
+    ],
+    "Prod": [
+      {
+        "name": "Smoke Tests",
+        "commands": [
+          "make test-smoke"
+        ]
+      }
+    ]
+  }
+}
