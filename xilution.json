@@ -1,22 +1,42 @@
 {
   "version": "1.0.0",
+  "runtime": "nodejs12.x",
+  "api": {
+    "endpoints": [
+      {
+        "id": "hello",
+        "method": "get",
+        "path": "/hello",
+        "function": {
+          "handler": "app.hello"
+        }
+      },
+      {
+        "id": "world",
+        "method": "get",
+        "path": "/world",
+        "function": {
+          "handler": "app.world"
+        }
+      }
+    ]
+  },
   "verify": {
     "commands": [
       "make verify"
     ]
   },
-  "builds": {
-    "Test": {
-      "commands": [
-        "make build-test"
-      ]
-    },
-    "Prod": {
-      "commands": [
-        "make build-prod"
-      ]
-    },
-    "distDir": "./dist"
+  "build": {
+    "commands": [
+      "make build"
+    ],
+    "buildDir": "./build"
+  },
+  "layer": {
+    "commands": [
+      "make install"
+    ],
+    "layerDir": "./node_modules"
   },
   "tests": {
     "Test": [

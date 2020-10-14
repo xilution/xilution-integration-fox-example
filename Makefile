@@ -1,16 +1,20 @@
+install:
+	/bin/bash ./scripts/install.sh
+
 verify:
-	echo "Nothing to verify."
+	/bin/bash ./scripts/verify.sh
 
-build-test:
-	mkdir -p ./dist
-	cp -v ./src/* ./dist/
+build:
+	/bin/bash ./scripts/build.sh
 
-build-prod:
-	mkdir -p ./dist
-	cp -v ./src/* ./dist/
+test-unit:
+	/bin/bash ./scripts/test-unit.sh
 
 test-e2e:
-	echo "No E2E tests yet."
+	/bin/bash ./scripts/test-e2e.sh
 
 test-smoke:
-	echo "No Smoke tests yet."
+	/bin/bash ./scripts/test-smoke.sh
+
+start-api:
+	/bin/bash ./scripts/start-api.sh
