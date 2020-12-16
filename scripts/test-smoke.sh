@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/bash -ex
 
-echo "No Smoke tests yet."
+echo "No smoke tests yet."

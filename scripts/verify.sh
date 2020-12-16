@@ -1,4 +1,3 @@
-#!/bin/bash
+#!/bin/bash -ex
 
-npm i
-npm run test
+npm run verify

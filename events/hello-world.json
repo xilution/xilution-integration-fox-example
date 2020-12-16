@@ -1,0 +1,6 @@
+{
+  "routeKey": "GET /",
+  "stageVariables": {
+    "stage": "qual"
+  }
+}

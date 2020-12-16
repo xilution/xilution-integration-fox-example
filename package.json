@@ -1,17 +1,53 @@
 {
-  "name": "hello_world",
-  "version": "1.0.0",
-  "description": "hello world sample for NodeJS",
-  "main": "src/app.js",
-  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
-  "author": "SAM CLI",
-  "license": "MIT",
-  "dependencies": {},
+  "name": "@xilution/xilution-integration-fox-example",
+  "version": "0.0.0",
+  "description": "Xilution Fox Example",
   "scripts": {
-    "test": "mocha tests/unit"
+    "build": "npx tsc",
+    "clean": "rm -rf built coverage node_modules",
+    "format": "npx prettier --write .",
+    "lint": "npx prettier --check .",
+    "test": "npm run test:unit",
+    "test:unit": "jest --testPathPattern ./tests/unit/",
+    "verify": "npm run lint && npm run test",
+    "release": "npx semantic-release"
   },
+  "dependencies": {},
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4"
-  }
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/aws-lambda": "^8.10.64",
+    "@types/chance": "^1.1.0",
+    "@types/jest": "^26.0.18",
+    "@types/lodash": "^4.14.165",
+    "@types/node": "^14.14.10",
+    "@types/pluralize": "0.0.29",
+    "@types/uuid": "^8.3.0",
+    "artillery": "^1.6.1",
+    "aws-sdk": "^2.803.0",
+    "axios": "^0.21.0",
+    "babel-jest": "^26.6.3",
+    "chance": "^1.1.7",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "prettier": "2.2.1",
+    "query-string": "^6.13.7",
+    "semantic-release": "^17.3.0",
+    "typescript": "^4.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "author": "Todd Brunia <tbrunia@gmail.com> (http://www.github.com/tbrunia)",
+  "license": "MIT"
 }

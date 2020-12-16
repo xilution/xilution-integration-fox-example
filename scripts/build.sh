@@ -1,4 +1,3 @@
-#!/bin/bash
+#!/bin/bash -ex
 
-mkdir -p ./build
-cp -r ./src/* ./build
+npm run build

@@ -1,3 +1,3 @@
 #!/bin/bash -ex
 
-npm run test
+npm ci

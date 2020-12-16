@@ -1,57 +1,37 @@
 {
   "runtime": "nodejs12.x",
+  "handler": "index.handler",
   "api": {
     "endpoints": [
       {
-        "id": "hello",
+        "id": "hello-world",
         "method": "get",
-        "path": "/hello",
-        "function": {
-          "handler": "app.hello"
-        }
-      },
-      {
-        "id": "world",
-        "method": "get",
-        "path": "/world",
-        "function": {
-          "handler": "app.world"
-        }
+        "path": "/"
       }
     ]
   },
   "verify": {
-    "commands": [
-      "make verify"
-    ]
+    "commands": ["make verify"]
   },
   "build": {
-    "commands": [
-      "make build"
-    ],
-    "buildDir": "./build"
+    "commands": ["make build"],
+    "buildDir": "./built"
   },
   "layer": {
-    "commands": [
-      "make install"
-    ],
+    "commands": ["make install"],
     "layerDir": "./node_modules"
   },
   "tests": {
-    "Test": [
+    "qual": [
       {
         "name": "End to End Tests",
-        "commands": [
-          "make test-e2e"
-        ]
+        "commands": ["make test-e2e"]
       }
     ],
-    "Prod": [
+    "prod": [
       {
         "name": "Smoke Tests",
-        "commands": [
-          "make test-smoke"
-        ]
+        "commands": ["make test-smoke"]
       }
     ]
   }
