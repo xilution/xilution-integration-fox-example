@@ -1,3 +1,6 @@
 .idea
-build
+.aws-sam
 node_modules
+coverage
+built
+output
