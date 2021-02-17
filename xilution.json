@@ -1,16 +1,6 @@
 {
   "runtime": "nodejs12.x",
   "handler": "index.handler",
-  "api": {
-    "endpoints": {
-      "public": {
-        "hello-world": {
-          "method": "get",
-          "path": "/"
-        }
-      }
-    }
-  },
   "verify": {
     "commands": ["make verify"]
   },
