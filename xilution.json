@@ -8,7 +8,8 @@
           "method": "get",
           "path": "/"
         }
-      }
+      },
+      "private": {}
     }
   },
   "verify": {
