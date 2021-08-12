@@ -12,7 +12,9 @@
     "verify": "npm run lint && npm run test",
     "release": "npx semantic-release"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.10",
